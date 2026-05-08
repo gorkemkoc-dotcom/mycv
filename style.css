@@ -950,3 +950,58 @@ footer {
   .card-stat  { grid-column: 1 / -1; min-height: auto; flex-direction: row; align-items: center; gap: 16px; }
   .stat-big   { font-size: 2rem; }
 }
+
+/* ═══════════════════════════════════════════════════
+   ADDITIONS — About section, role summaries, skill summaries
+═══════════════════════════════════════════════════ */
+
+/* ── ABOUT BLOCK ─────────────────────────────────── */
+.about-block {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.about-block p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-2);
+}
+.about-block .about-lead {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: var(--text);
+  font-weight: 500;
+  letter-spacing: -.005em;
+}
+
+/* ── TIMELINE ENTRY SUMMARY (one-line plain-language) ── */
+.tl-summary {
+  font-size: .98rem;
+  line-height: 1.65;
+  color: var(--text-2);
+  margin: 4px 0 18px;
+  padding: 12px 14px;
+  background: rgba(255 255 255 / .025);
+  border-left: 2px solid var(--blue);
+  border-radius: 4px;
+}
+
+/* ── SKILL CARD SUMMARY ─────────────────────────── */
+.skill-summary {
+  font-size: .9rem;
+  line-height: 1.6;
+  color: var(--text-2);
+  margin: 4px 0 14px;
+}
+
+/* ── RESPONSIVE ADJUSTMENTS ─────────────────────── */
+@media (max-width: 640px) {
+  .about-block .about-lead { font-size: 1.04rem; }
+  .tl-summary { font-size: .92rem; padding: 10px 12px; }
+  .skill-summary { font-size: .86rem; }
+}
+
+/* tl-summary accent matches the entry's logo color */
+.tl-entry:has(.tl-logo-teal)   .tl-summary { border-left-color: var(--cyan); }
+.tl-entry:has(.tl-logo-purple) .tl-summary { border-left-color: var(--purple); }

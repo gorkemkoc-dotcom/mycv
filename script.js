@@ -8,7 +8,8 @@
 ──────────────────────────────────────────────────── */
 const LANG_KEY = 'gk_lang';
 
-let currentLang = localStorage.getItem(LANG_KEY) || 'tr';
+/* Default to English on first visit; honor the user's previous choice afterwards. */
+let currentLang = localStorage.getItem(LANG_KEY) || 'en';
 
 function applyLang(lang) {
   currentLang = lang;
@@ -32,8 +33,11 @@ function applyLang(lang) {
 
   // swap page title
   document.title = lang === 'tr'
-    ? 'Görkem KOÇ — Principal Specialist, System & Infrastructure'
+    ? 'Görkem KOÇ — Principal Specialist, Sistem & Altyapı'
     : 'Görkem KOÇ — Principal Specialist, System & Infrastructure';
+
+  // also keep the <html lang> attribute correct for screen readers / SEO
+  document.documentElement.setAttribute('lang', lang);
 }
 
 // toggle
