@@ -116,21 +116,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 
-/* ── BENTO CARD SUBTLE TILT ───────────────────────── */
-if (window.matchMedia('(hover: hover)').matches) {
-  document.querySelectorAll('.bento-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const r   = card.getBoundingClientRect();
-      const x   = (e.clientX - r.left) / r.width  - 0.5;
-      const y   = (e.clientY - r.top)  / r.height - 0.5;
-      card.style.transform = `translateY(-2px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
-      card.style.transformOrigin = 'center center';
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
-  });
-}
+/* ── BENTO CARD HOVER ─────────────────────────────────
+   3D mouse-tilt removed for a calmer, more professional feel.
+   The subtle hover lift is handled in CSS (.bento-card:hover).
+──────────────────────────────────────────────────────── */
 
 
 /* ── STAT COUNTER ─────────────────────────────────── */
