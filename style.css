@@ -14,12 +14,31 @@
   --accent:    #2557d6;
   --accent-bg: #eff3fc;
 
+  --btn-bg:    #18181b;
+  --btn-fg:    #ffffff;
+  --header-bg: rgba(255 255 255 / .85);
+
   --font: 'Inter', system-ui, -apple-system, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, monospace;
 
   --nav-h: 60px;
   --maxw:  760px;
   --gap:   104px;
+}
+
+[data-theme="dark"] {
+  --bg:        #0d0f13;
+  --alt:       #14171d;
+  --text:      #e9e9ec;
+  --text-2:    #a6a7ad;
+  --text-3:    #6d6f78;
+  --border:    #262a31;
+  --border-2:  #353a43;
+  --accent:    #7ba1ff;
+  --accent-bg: #182234;
+  --btn-bg:    #2f5fe0;
+  --btn-fg:    #ffffff;
+  --header-bg: rgba(13 15 19 / .85);
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,6 +53,7 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  transition: background .25s ease, color .25s ease;
 }
 
 a  { color: inherit; text-decoration: none; }
@@ -60,7 +80,7 @@ button { cursor: pointer; font-family: inherit; }
   border-bottom: 1px solid transparent;
 }
 #header.scrolled {
-  background: rgba(255 255 255 / .85);
+  background: var(--header-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -89,6 +109,18 @@ button { cursor: pointer; font-family: inherit; }
 .lang-active   { color: var(--accent); }
 .lang-sep      { color: var(--text-3); }
 .lang-inactive { color: var(--text-3); }
+
+.theme-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 33px; height: 31px; background: transparent;
+  border: 1px solid var(--border-2); border-radius: 7px;
+  color: var(--text-2); transition: border-color .2s, color .2s;
+}
+.theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+.theme-btn svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.theme-btn .ic-sun { display: none; }
+[data-theme="dark"] .theme-btn .ic-moon { display: none; }
+[data-theme="dark"] .theme-btn .ic-sun  { display: block; }
 
 .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 4px; }
 .hamburger span { display: block; width: 21px; height: 2px; background: var(--text-2); border-radius: 2px; transition: all .28s; }
@@ -126,7 +158,7 @@ button { cursor: pointer; font-family: inherit; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
   font-size: .88rem; font-weight: 500; padding: 11px 22px; border-radius: 9px;
-  background: var(--text); color: #fff; border: 1px solid var(--text);
+  background: var(--btn-bg); color: var(--btn-fg); border: 1px solid var(--btn-bg);
   transition: opacity .2s, transform .15s;
 }
 .btn:hover { opacity: .88; transform: translateY(-1px); }

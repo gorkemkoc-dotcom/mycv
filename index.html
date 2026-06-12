@@ -9,6 +9,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('gk_theme');
+        var dark = saved ? saved === 'dark'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (dark) document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -25,6 +35,10 @@
     </ul>
 
     <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Dark mode">
+        <svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.2 4.2l1.5 1.5M18.3 18.3l1.5 1.5M2 12h2M20 12h2M4.2 19.8l1.5-1.5M18.3 5.7l1.5-1.5"/></svg>
+      </button>
       <button class="lang-btn" id="langBtn" aria-label="Toggle language">
         <span class="lang-active" id="langLabel">EN</span>
         <span class="lang-sep">/</span>
@@ -57,7 +71,7 @@
       <ul class="hero-facts">
         <li data-tr="7+ yıl kurumsal BT" data-en="7+ years in enterprise IT">7+ years in enterprise IT</li>
         <li data-tr="Etiya'da 3 rol · 2 terfi" data-en="3 roles at Etiya · 2 promotions">3 roles at Etiya · 2 promotions</li>
-        <li data-tr="AWS sertifikalı" data-en="AWS certified">AWS certified</li>
+        <li data-tr="Architecting on AWS (2025)" data-en="Architecting on AWS (2025)">Architecting on AWS (2025)</li>
       </ul>
 
       <div class="hero-actions">
@@ -96,39 +110,39 @@
           </div>
           <span class="job-date">2021 &ndash; <span data-tr="Halen" data-en="Present">Present</span></span>
         </div>
-        <p class="job-sum" data-tr="Çalışanların kullandığı bilgisayarların, kullanıcı hesaplarının ve sunucuların kesintisiz çalışmasından sorumluyum. Aşağıdaki başlıklar, Etiya'da bu süreçte hayata geçirdiğim başlıca işlerdir." data-en="Responsible for keeping the computers, user accounts and servers used across the company running without interruption. Below are the main initiatives I've delivered at Etiya so far.">Responsible for keeping the computers, user accounts and servers used across the company running without interruption. Below are the main initiatives I've delivered at Etiya so far.</p>
+        <p class="job-sum" data-tr="Şirket genelinde kullanılan istemci, kimlik ve sunucu altyapısının sürekliliğinden sorumluyum. Etiya'da hayata geçirdiğim başlıca çalışmalar:" data-en="I own the reliability of the client, identity and server infrastructure used across the organization. Key initiatives I've delivered at Etiya:">I own the reliability of the client, identity and server infrastructure used across the organization. Key initiatives I've delivered at Etiya:</p>
         <ul class="job-points">
           <li>
-            <span class="ph" data-tr="Tekrar eden işleri otomatikleştirdim" data-en="Automated repetitive work">Automated repetitive work</span>
-            <span class="pb" data-tr="Yeni çalışan açılışı, yetki talebi ve sistem ihtiyaç bildirimleri gibi tekrar eden Jira talepleri için n8n ile otomasyon akışları kurdum. Eskiden elle yapılan adımlar artık otomatik tamamlanıyor; ekip rutin ticket'lara daha az zaman harcıyor." data-en="I built n8n automation flows for recurring Jira requests such as new-hire onboarding, access requests and system needs. Steps that used to be handled manually now run automatically, so the team spends less time on routine tickets.">I built n8n automation flows for recurring Jira requests such as new-hire onboarding, access requests and system needs. Steps that used to be handled manually now run automatically, so the team spends less time on routine tickets.</span>
+            <span class="ph" data-tr="Operasyonel iş akışlarını otomatikleştirdim" data-en="Automated operational workflows">Automated operational workflows</span>
+            <span class="pb" data-tr="Onboarding, erişim yetkilendirme ve tekrarlayan sistem taleplerini n8n ile Jira üzerinde otomatikleştirdim; manuel süreçleri ortadan kaldırarak ekibin operasyonel iş yükünü ve insan kaynaklı hataları azalttım." data-en="Automated onboarding, access provisioning and recurring system requests in n8n on top of Jira, eliminating manual steps and reducing both the team's operational load and human error.">Automated onboarding, access provisioning and recurring system requests in n8n on top of Jira, eliminating manual steps and reducing both the team's operational load and human error.</span>
           </li>
           <li>
-            <span class="ph" data-tr="Şirket bilgisayarlarını tek merkezden yönetilebilir hale getirdim" data-en="Brought company computers under centralized management">Brought company computers under centralized management</span>
-            <span class="pb" data-tr="Şirketteki tüm bilgisayarlara güvenlik güncellemeleri ve uygulama kurulumları, SCCM ve ManageEngine üzerinden merkezi olarak dağıtılıyor. Bu standart yapı sayesinde herkesin bilgisayarı aynı politikayla, aynı zamanda güncelleniyor." data-en="Security updates and application installs for every company computer are deployed centrally via SCCM and ManageEngine, so every device is updated under the same policy at the same time.">Security updates and application installs for every company computer are deployed centrally via SCCM and ManageEngine, so every device is updated under the same policy at the same time.</span>
+            <span class="ph" data-tr="Uç nokta yönetimini merkezileştirdim" data-en="Centralized endpoint management">Centralized endpoint management</span>
+            <span class="pb" data-tr="Tüm kurumsal istemcilerde güvenlik yamalarını ve uygulama dağıtımını SCCM ve ManageEngine ile merkezden standartlaştırdım; tek tip politika altında tutarlı ve denetlenebilir bir uç nokta ortamı sağladım." data-en="Standardized security patching and application deployment across all corporate endpoints with SCCM and ManageEngine, delivering a consistent, auditable estate governed by a single policy.">Standardized security patching and application deployment across all corporate endpoints with SCCM and ManageEngine, delivering a consistent, auditable estate governed by a single policy.</span>
           </li>
           <li>
-            <span class="ph" data-tr="Sunucu altyapısını sürekli ayakta tutuyorum" data-en="Keeping the server infrastructure always on">Keeping the server infrastructure always on</span>
-            <span class="pb" data-tr="Şirket içi uygulamaların çalıştığı VMware ve Hyper-V sunucularını &quot;bir tanesi düşse bile servis durmasın&quot; mantığıyla yapılandırdım. Bu yaklaşım, iş açısından kritik servislerin gün içinde erişilebilir kalmasını sağlıyor." data-en="I configured the VMware and Hyper-V servers running internal applications so that a single host failure does not disrupt the service, keeping business-critical systems available during the day.">I configured the VMware and Hyper-V servers running internal applications so that a single host failure does not disrupt the service, keeping business-critical systems available during the day.</span>
+            <span class="ph" data-tr="Sunucu altyapısını yüksek erişilebilir hale getirdim" data-en="Hardened server availability">Hardened server availability</span>
+            <span class="pb" data-tr="Şirket içi uygulamaların çalıştığı VMware ve Hyper-V ortamını, tek bir host arızasında servis kesintisi yaşanmayacak şekilde yapılandırdım ve iş açısından kritik servislerin sürekliliğini güvence altına aldım." data-en="Configured the VMware and Hyper-V environment behind our internal applications to withstand a single-host failure without service interruption, safeguarding the continuity of business-critical services.">Configured the VMware and Hyper-V environment behind our internal applications to withstand a single-host failure without service interruption, safeguarding the continuity of business-critical services.</span>
           </li>
           <li>
-            <span class="ph" data-tr="Kullanıcı hesabı ve e-posta yönetimini hibrit modele taşıdım" data-en="Moved user-account and email management to a hybrid model">Moved user-account and email management to a hybrid model</span>
-            <span class="pb" data-tr="Şirket içi Active Directory ile bulut taraftaki Microsoft 365 / Entra ID'yi tek bir kimlik altyapısı gibi çalışacak şekilde entegre ettim. Bir çalışan ofiste de evden de aynı kullanıcı adıyla giriş yapıyor, yetkileri tek noktadan yönetiliyor; işten ayrıldığında ise tüm erişimleri tek hareketle kapatılıyor." data-en="I integrated on-prem Active Directory with cloud-side Microsoft 365 / Entra ID so they behave as a single identity infrastructure. An employee logs in with the same username from the office or from home, permissions are managed from one place, and when someone leaves all access is revoked in one move.">I integrated on-prem Active Directory with cloud-side Microsoft 365 / Entra ID so they behave as a single identity infrastructure. An employee logs in with the same username from the office or from home, permissions are managed from one place, and when someone leaves all access is revoked in one move.</span>
+            <span class="ph" data-tr="Hibrit kimlik altyapısını kurdum" data-en="Unified identity across on-prem and cloud">Unified identity across on-prem and cloud</span>
+            <span class="pb" data-tr="Şirket içi Active Directory ile Microsoft 365 / Entra ID'yi tek bir kimlik düzleminde entegre ettim; tek noktadan erişim yönetimi ve ayrılışta tüm erişimlerin anında kapatılmasıyla kimlik yaşam döngüsünü baştan sona kontrol altına aldım." data-en="Integrated on-prem Active Directory with Microsoft 365 / Entra ID into a single identity plane, with centralized access management and immediate offboarding that keep the full identity lifecycle under control.">Integrated on-prem Active Directory with Microsoft 365 / Entra ID into a single identity plane, with centralized access management and immediate offboarding that keep the full identity lifecycle under control.</span>
           </li>
           <li>
-            <span class="ph" data-tr="Güvenlik ve uyumluluk standartlarını sahaya taşıdım" data-en="Brought security &amp; compliance standards into daily operations">Brought security &amp; compliance standards into daily operations</span>
-            <span class="pb" data-tr="ISO 27001 ve PCI-DSS gerekliliklerini günlük operasyona dönüştürdüm: kim hangi sisteme erişebilir net şekilde tanımlandı, çalışan bilgisayarlarına CrowdStrike ve Trend Micro EDR çözümleri yaygınlaştırıldı, şüpheli olaylar otomatik tespit edilip ekibe düşüyor." data-en="I translated ISO 27001 and PCI-DSS requirements into daily operations: access rights are clearly defined per system, CrowdStrike and Trend Micro EDR are rolled out across employee devices, and suspicious events are automatically detected and routed to the team.">I translated ISO 27001 and PCI-DSS requirements into daily operations: access rights are clearly defined per system, CrowdStrike and Trend Micro EDR are rolled out across employee devices, and suspicious events are automatically detected and routed to the team.</span>
+            <span class="ph" data-tr="Güvenlik ve uyumluluğu operasyona entegre ettim" data-en="Embedded security &amp; compliance into operations">Embedded security &amp; compliance into operations</span>
+            <span class="pb" data-tr="ISO 27001 ve PCI-DSS gerekliliklerini günlük operasyona uyarladım: sistem bazlı erişim kontrolü tanımladım, tüm cihazlarda CrowdStrike ve Trend Micro EDR yaygınlaştırdım ve şüpheli olayların otomatik tespit ile yönlendirmesini kurdum." data-en="Operationalized ISO 27001 and PCI-DSS requirements: defined per-system access control, rolled out CrowdStrike and Trend Micro EDR across all devices, and implemented automated detection and routing of suspicious events.">Operationalized ISO 27001 and PCI-DSS requirements: defined per-system access control, rolled out CrowdStrike and Trend Micro EDR across all devices, and implemented automated detection and routing of suspicious events.</span>
           </li>
           <li>
             <span class="ph" data-tr="DNS'i AWS Route 53'e taşıdım" data-en="Migrated DNS to AWS Route 53">Migrated DNS to AWS Route 53</span>
-            <span class="pb" data-tr="Şirketin public DNS hosted zone'unu GoDaddy'den AWS Route 53'e taşıdım ve public DNS yönetimini AWS tarafında topladım." data-en="Moved the company's public DNS hosted zone from GoDaddy to AWS Route 53 and consolidated public DNS management on the AWS side.">Moved the company's public DNS hosted zone from GoDaddy to AWS Route 53 and consolidated public DNS management on the AWS side.</span>
+            <span class="pb" data-tr="Şirketin public DNS hosted zone'unu GoDaddy'den AWS Route 53'e migrate ettim ve public DNS yönetimini AWS üzerinde konsolide ederek tek elden yönetilebilir hale getirdim." data-en="Migrated the company's public DNS hosted zone from GoDaddy to AWS Route 53 and consolidated public DNS management on AWS for single-pane control.">Migrated the company's public DNS hosted zone from GoDaddy to AWS Route 53 and consolidated public DNS management on AWS for single-pane control.</span>
           </li>
           <li>
-            <span class="ph" data-tr="Sanal sunucuları TTCloud'da yönetiyorum" data-en="Managed virtual servers on TTCloud">Managed virtual servers on TTCloud</span>
-            <span class="pb" data-tr="TTCloud ortamındaki sanal sunucuları yönetiyorum; sunucu yapılandırmalarını ve rutin değişiklikleri Ansible ile otomatikleştiriyorum." data-en="I run the virtual servers in the TTCloud environment and automate their configuration and routine changes with Ansible, so setups stay consistent and repeatable.">I run the virtual servers in the TTCloud environment and automate their configuration and routine changes with Ansible, so setups stay consistent and repeatable.</span>
+            <span class="ph" data-tr="Sunucu provizyonunu kod ile otomatikleştirdim" data-en="Automated server provisioning with code">Automated server provisioning with code</span>
+            <span class="pb" data-tr="TTCloud üzerindeki sanal sunucuları yönetiyor; yapılandırma ve rutin değişiklikleri Ansible ile otomatikleştirerek tutarlı ve tekrarlanabilir kurulumlar sağlıyorum." data-en="Manage the virtual servers on TTCloud and automate their configuration and routine changes with Ansible, delivering consistent and repeatable provisioning.">Manage the virtual servers on TTCloud and automate their configuration and routine changes with Ansible, delivering consistent and repeatable provisioning.</span>
           </li>
           <li>
-            <span class="ph" data-tr="Sunucuları izliyor, atıl olanları tespit ediyorum" data-en="Monitored the server estate">Monitored the server estate</span>
-            <span class="pb" data-tr="Sunucuları Grafana ve FlowE ile izliyorum; atıl (kullanılmayan) sunucuları tespit ederek ortamı verimli tutuyorum." data-en="I track servers with Grafana and FlowE to spot idle or underused machines and keep the environment efficient.">I track servers with Grafana and FlowE to spot idle or underused machines and keep the environment efficient.</span>
+            <span class="ph" data-tr="Altyapıyı izleyip kaynak verimliliğini artırdım" data-en="Monitored infrastructure and optimized resource use">Monitored infrastructure and optimized resource use</span>
+            <span class="pb" data-tr="Sunucu filosunu Grafana ve FlowE ile sürekli izliyor; atıl ve düşük kullanımlı kaynakları tespit ederek ortamı verimli ve sade tutuyorum." data-en="Continuously monitor the server fleet with Grafana and FlowE, identifying idle and underused resources to keep the environment lean and efficient.">Continuously monitor the server fleet with Grafana and FlowE, identifying idle and underused resources to keep the environment lean and efficient.</span>
           </li>
         </ul>
         <div class="tags">
@@ -144,15 +158,15 @@
           </div>
           <span class="job-date">2019 &ndash; 2021</span>
         </div>
-        <p class="job-sum" data-tr="Akgün Bilgisayar bünyesinde bir devlet hastanesi sahasında görev aldım. Doktor ve hemşirelerin kullandığı Hasta Bilgi Yönetim Sistemi (HBYS) başta olmak üzere tüm BT altyapısının 7/24 çalışmasından sorumluydum." data-en="As part of Akgün Bilgisayar I was on-site at a state hospital. I was responsible for keeping the entire IT infrastructure — most importantly the Hospital Information System (HIS) used by doctors and nurses — running 24/7.">As part of Akgün Bilgisayar I was on-site at a state hospital. I was responsible for keeping the entire IT infrastructure — most importantly the Hospital Information System (HIS) used by doctors and nurses — running 24/7.</p>
+        <p class="job-sum" data-tr="Akgün Bilgisayar adına bir kamu hastanesinde saha sorumlusu olarak görev aldım; doktor ve hemşirelerin kullandığı Hastane Bilgi Yönetim Sistemi (HBYS) başta olmak üzere tüm BT altyapısının 7/24 sürekliliğinden sorumluydum." data-en="On-site lead for Akgün Bilgisayar at a public hospital, responsible for the 24/7 continuity of the entire IT infrastructure — most critically the Hospital Information System (HIS) used by doctors and nurses.">On-site lead for Akgün Bilgisayar at a public hospital, responsible for the 24/7 continuity of the entire IT infrastructure — most critically the Hospital Information System (HIS) used by doctors and nurses.</p>
         <ul class="job-points">
           <li>
-            <span class="ph" data-tr="Hastane sistemlerini ayakta tuttum" data-en="Kept the hospital systems running">Kept the hospital systems running</span>
-            <span class="pb" data-tr="HBYS ve bağlı sunucuları sürekli izledim, sorunları büyümeden tespit edip müdahale ettim; acil ve poliklinik birimlerinin gün içindeki kesintilerini en aza indirdim." data-en="I monitored the HIS and the underlying servers and addressed issues before they escalated, minimising disruption to the emergency and outpatient departments during the day.">I monitored the HIS and the underlying servers and addressed issues before they escalated, minimising disruption to the emergency and outpatient departments during the day.</span>
+            <span class="ph" data-tr="Klinik sistemlerin sürekliliğini sağladım" data-en="Sustained clinical-system uptime">Sustained clinical-system uptime</span>
+            <span class="pb" data-tr="HBYS ve bağlı sunucuları proaktif olarak izledim, sorunları büyümeden müdahale ederek acil ve poliklinik birimlerinde gün içi kesintileri asgariye indirdim." data-en="Proactively monitored the HIS and its servers, intervening before issues escalated to minimize daytime downtime in the ER and outpatient units.">Proactively monitored the HIS and its servers, intervening before issues escalated to minimize daytime downtime in the ER and outpatient units.</span>
           </li>
           <li>
-            <span class="ph" data-tr="Hasta verilerini güvenle yedekledim" data-en="Backed up patient data safely">Backed up patient data safely</span>
-            <span class="pb" data-tr="Veeam ve Acronis ile düzenli yedekleme politikaları kurdum, bu yedeklerin gerçekten geri yüklenebildiğini periyodik olarak test ettim; böylece donanım arızalarında verinin kurtarılabilir kalmasını sağladım." data-en="I set up regular backup policies with Veeam and Acronis and periodically tested that those backups could actually be restored, so data could be recovered after hardware failures.">I set up regular backup policies with Veeam and Acronis and periodically tested that those backups could actually be restored, so data could be recovered after hardware failures.</span>
+            <span class="ph" data-tr="Veri kurtarılabilirliğini güvence altına aldım" data-en="Guaranteed data recoverability">Guaranteed data recoverability</span>
+            <span class="pb" data-tr="Veeam ve Acronis ile kurumsal yedekleme politikaları kurdum ve geri yükleme testlerini periyodik olarak yürüterek donanım arızalarında veri kurtarılabilirliğini güvence altına aldım." data-en="Established enterprise backup policies with Veeam and Acronis and ran periodic restore tests, guaranteeing data recoverability in the event of hardware failure.">Established enterprise backup policies with Veeam and Acronis and ran periodic restore tests, guaranteeing data recoverability in the event of hardware failure.</span>
           </li>
         </ul>
         <div class="tags">
@@ -168,19 +182,19 @@
           </div>
           <span class="job-date" data-tr="Ara 2018 – May 2019" data-en="Dec 2018 – May 2019">Dec 2018 – May 2019</span>
         </div>
-        <p class="job-sum" data-tr="Özel bir cerrahi tıp merkezinde Bilgi İşlem Yöneticisi olarak sunucu, ağ ve son kullanıcı bilgisayarlarının kurulmasından, devamlılığından ve modernizasyonundan sorumluydum." data-en="As IT Manager at a private surgical medical center I was responsible for setting up, maintaining and modernizing servers, network equipment and end-user computers.">As IT Manager at a private surgical medical center I was responsible for setting up, maintaining and modernizing servers, network equipment and end-user computers.</p>
+        <p class="job-sum" data-tr="Özel bir cerrahi tıp merkezinde Bilgi İşlem Yöneticisi olarak sunucu, ağ ve uç nokta altyapısının kurulumundan, sürekliliğinden ve modernizasyonundan sorumluydum." data-en="As IT Manager at a private surgical center, responsible for the setup, continuity and modernization of the server, network and endpoint infrastructure.">As IT Manager at a private surgical center, responsible for the setup, continuity and modernization of the server, network and endpoint infrastructure.</p>
         <ul class="job-points">
           <li>
-            <span class="pb" data-tr="HP sunucu üzerinde çalışan Citrix ortamını yönettim; kullanıcılar uygulamalara bu merkezi ortam üzerinden ortak erişti." data-en="Maintained the HP server and the Citrix environment running on it, through which users accessed shared applications from one place.">Maintained the HP server and the Citrix environment running on it, through which users accessed shared applications from one place.</span>
+            <span class="pb" data-tr="HP sunucu üzerinde çalışan Citrix ortamını yönettim; kullanıcılara uygulamalara merkezi ve denetlenebilir tek bir noktadan erişim sağladım." data-en="Managed a Citrix environment running on an HP server, providing users with centralized, controlled access to applications from a single point.">Managed a Citrix environment running on an HP server, providing users with centralized, controlled access to applications from a single point.</span>
           </li>
           <li>
-            <span class="pb" data-tr="Yeni alınan bilgisayarlara işletim sisteminin tek tek yüklenmesi yerine, ağ üzerinden otomatik yüklendiği bir yapı (WDS) kurdum. Aynı kurulumu tek tek yüklemek yerine çok sayıda bilgisayara dağıtabildim." data-en="Instead of installing the OS on every new computer one by one, I built a network-based automatic deployment (WDS), so the same setup could be delivered to many computers at once.">Instead of installing the OS on every new computer one by one, I built a network-based automatic deployment (WDS), so the same setup could be delivered to many computers at once.</span>
+            <span class="pb" data-tr="WDS ile ağ tabanlı otomatik işletim sistemi dağıtımı kurarak uç nokta kurulum süreçlerini standartlaştırdım ve kurulum sürelerini önemli ölçüde kısalttım." data-en="Built network-based automated OS deployment with WDS, standardizing endpoint provisioning and significantly reducing setup time.">Built network-based automated OS deployment with WDS, standardizing endpoint provisioning and significantly reducing setup time.</span>
           </li>
           <li>
-            <span class="pb" data-tr="Kurum içi ağı VLAN'lara bölerek hasta verisinin geçtiği trafikle misafir/wifi trafiğini birbirinden ayırdım; ağ hem daha güvenli hem daha düzenli hale geldi." data-en="I segmented the local network into VLANs, separating patient-data traffic from guest/Wi-Fi traffic; the network became both safer and more orderly.">I segmented the local network into VLANs, separating patient-data traffic from guest/Wi-Fi traffic; the network became both safer and more orderly.</span>
+            <span class="pb" data-tr="Yerel ağı VLAN'lara segmente ederek hasta verisi trafiğini misafir/Wi-Fi trafiğinden izole ettim ve ağ güvenliği ile düzenini artırdım." data-en="Segmented the local network into VLANs, isolating patient-data traffic from guest/Wi-Fi traffic to strengthen network security and order.">Segmented the local network into VLANs, isolating patient-data traffic from guest/Wi-Fi traffic to strengthen network security and order.</span>
           </li>
           <li>
-            <span class="pb" data-tr="Tüm donanım envanterini takip ettim, arıza taleplerini hedef sürelerde çözdüm ve eskimiş altyapı bileşenlerini yenileme projelerini yürüttüm." data-en="I tracked the full hardware inventory, resolved incident tickets within target SLAs, and ran modernization projects for aging infrastructure components.">I tracked the full hardware inventory, resolved incident tickets within target SLAs, and ran modernization projects for aging infrastructure components.</span>
+            <span class="pb" data-tr="Kurumsal donanım envanterini yönettim, arıza taleplerini hedef SLA süreleri içinde çözdüm ve eskiyen altyapı bileşenleri için modernizasyon projeleri yürüttüm." data-en="Managed the corporate hardware inventory, resolved incident tickets within target SLAs, and ran modernization projects for aging infrastructure components.">Managed the corporate hardware inventory, resolved incident tickets within target SLAs, and ran modernization projects for aging infrastructure components.</span>
           </li>
         </ul>
         <div class="tags">

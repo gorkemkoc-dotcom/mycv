@@ -49,6 +49,20 @@ document.getElementById('langBtn')?.addEventListener('click', () => {
 applyLang(currentLang);
 
 
+/* ── THEME (dark mode) ────────────────────────────── */
+// Initial theme is set by the inline <head> script (localStorage or OS preference)
+// to avoid a flash. Here we just wire up the toggle button.
+function setTheme(theme) {
+  if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  else document.documentElement.removeAttribute('data-theme');
+  try { localStorage.setItem('gk_theme', theme); } catch (e) {}
+}
+document.getElementById('themeBtn')?.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  setTheme(isDark ? 'light' : 'dark');
+});
+
+
 /* ── STICKY NAV ───────────────────────────────────── */
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
