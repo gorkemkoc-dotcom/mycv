@@ -257,3 +257,154 @@ footer { border-top: 1px solid var(--border); padding-block: 26px; }
   .cert, .edu { grid-template-columns: 1fr; gap: 4px; }
   .cert-yr { padding-top: 0; }
 }
+/* ═══════════════════════════════════════════════════════════════════
+   EK STİLLER — mevcut style.css'in SONUNA yapıştır.
+   Hiçbir mevcut kuralı değiştirmiyor, yalnızca yeni bileşen ekliyor.
+   Böylece geri alman gerekirse tek blok siliyorsun.
+═══════════════════════════════════════════════════════════════════ */
+
+
+/* ── SKIP LINK ───────────────────────────────────────────────────
+   Klavyeyle gezen ve ekran okuyucu kullanan ziyaretçi için.
+   Görünmez; yalnızca Tab'a basınca ekranın üstüne iner.
+──────────────────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 1000;
+  background: var(--btn-bg); color: var(--btn-fg);
+  padding: 10px 18px; border-radius: 0 0 9px 0;
+  font-size: .85rem; font-weight: 500;
+}
+.skip-link:focus { left: 0; }
+
+
+/* ── HERO METRİK ŞERİDİ ──────────────────────────────────────────
+   index.html'de style="display:none" ile kapalı geliyor.
+   Rakamları doldurduktan sonra o niteliği sil.
+──────────────────────────────────────────────────────────────── */
+.hero-metrics {
+  display: flex; flex-wrap: wrap; gap: 14px 40px;
+  margin-top: 30px; padding-top: 26px;
+  border-top: 1px solid var(--border);
+  max-width: 620px;
+}
+.hero-metrics li { display: flex; flex-direction: column; gap: 4px; }
+.hm-val {
+  font-size: 1.5rem; font-weight: 700; letter-spacing: -.02em;
+  line-height: 1.1; color: var(--text);
+}
+.hm-lbl {
+  font-size: .78rem; line-height: 1.45; color: var(--text-2);
+}
+
+@media (max-width: 560px) {
+  .hero-metrics { gap: 18px 28px; }
+  .hm-val { font-size: 1.25rem; }
+}
+
+
+/* ── ROL PROGRESSION (Etiya) ─────────────────────────────────────
+   Tek bir iş kaydı içindeki terfi çizgisi. Sol kenarda ince bir
+   dikey çizgi, her rolde bir nokta. En üstteki rol vurgulu.
+──────────────────────────────────────────────────────────────── */
+.role-track {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 18px;
+  border-left: 1px solid var(--border-2);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.role-track li {
+  position: relative;
+  display: flex; align-items: baseline; gap: 14px;
+}
+.role-track li::before {
+  content: ''; position: absolute; left: -22px; top: 8px;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--border-2);
+  border: 2px solid var(--bg);
+  box-sizing: content-box;
+}
+.section-alt .role-track li::before { background: var(--border-2); border-color: var(--alt); }
+.role-track .rt-current::before { background: var(--accent); }
+
+.rt-yr {
+  font-family: var(--mono); font-size: .76rem; color: var(--text-3);
+  min-width: 62px; white-space: nowrap;
+}
+.rt-role { font-size: .92rem; color: var(--text-2); }
+.rt-current .rt-role { font-weight: 600; color: var(--text); }
+
+
+/* ── DOLDURULMAMIŞ METRİK İŞARETİ ────────────────────────────────
+   <b class="todo">N</b> — sarı zeminde durur, göze batar.
+   Rakamı yazdıktan sonra class="todo" niteliğini sil; geriye
+   normal kalın metin kalır ve vurgu istediğin yerde durur.
+
+   Yayına çıkmadan önce kontrol:
+     grep -c 'class="todo"' index.html   →  0 dönmeli
+──────────────────────────────────────────────────────────────── */
+b.todo {
+  background: #fef3c7;
+  color: #78350f;
+  font-weight: 600;
+  padding: 0 5px;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+[data-theme="dark"] b.todo { background: #422006; color: #fcd34d; }
+
+
+/* ── SERTİFİKA DOĞRULAMA LİNKİ ───────────────────────────────────
+   href="#" kaldığı sürece görünmez — yanlışlıkla ölü link
+   yayınlamanı engeller. Gerçek URL koyunca kendiliğinden çıkar.
+──────────────────────────────────────────────────────────────── */
+.cert-verify {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-top: 9px;
+  font-family: var(--mono); font-size: .74rem; font-weight: 500;
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s;
+}
+.cert-verify:hover { border-bottom-color: var(--accent); }
+.cert-verify::after { content: '↗'; font-size: .72rem; }
+.cert-verify[href="#"], .cert-verify[href=""] { display: none; }
+
+
+/* ── PRINT / TARAYICIDAN PDF ─────────────────────────────────────
+   Ctrl+P çıktısı da temiz olsun. PDF'i ayrıca dosya olarak
+   veriyoruz ama bu güvenlik ağı.
+──────────────────────────────────────────────────────────────── */
+@media print {
+  #header, .mobile-menu, .hero-actions, .skip-link,
+  .theme-btn, .lang-btn, .hamburger { display: none !important; }
+
+  :root { --gap: 28px; }
+  body { background: #fff; color: #000; font-size: 11pt; line-height: 1.45; }
+  .container { max-width: 100%; padding-inline: 0; }
+  .section, .hero { padding-block: 18px; }
+  .hero { padding-top: 0; }
+  .section-alt { background: #fff; border: none; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .job, .cert, .edu { break-inside: avoid; page-break-inside: avoid; }
+  .section-hd h2 { font-size: 15pt; }
+  .hero-name { font-size: 24pt; }
+  .tags span { border-color: #ccc; }
+  b.todo { background: none; color: inherit; padding: 0; }
+  a[href^="http"]::after { content: ' (' attr(href) ')'; font-size: 8pt; color: #555; }
+  a[href^="#"]::after, a[href^="mailto"]::after { content: ''; }
+}
+
+
+/* ── REDUCED MOTION ──────────────────────────────────────────────
+   Mevcut .reveal kuralı zaten kapsıyordu; smooth scroll'u da
+   kapatarak vestibüler rahatsızlığı olan ziyaretçiyi koruyoruz.
+──────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

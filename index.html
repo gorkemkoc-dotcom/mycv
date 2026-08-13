@@ -3,12 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Görkem Koç — Principal Specialist, System &amp; Infrastructure at Etiya. 7+ years of enterprise IT, hybrid identity, security and automation experience." />
+
   <title>Görkem KOÇ — Principal Specialist, System &amp; Infrastructure</title>
+  <meta name="description" content="Görkem Koç — Principal Specialist, System &amp; Infrastructure at Etiya. Hybrid identity (AD + Entra ID), endpoint estate at scale, VMware/Hyper-V, ISO 27001 &amp; PCI-DSS operations." />
+  <meta name="author" content="Görkem Koç" />
+
+  <!-- ── CANONICAL + DİL ALTERNATİFLERİ ───────────────────────────────
+       Türkçe içerik artık ayrı bir URL'de indekslenebilir: ?lang=tr
+       script.js dil değişiminde URL'i ve canonical'ı günceller.
+  ────────────────────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://cv.ops-center.org/" />
+  <link rel="alternate" hreflang="en" href="https://cv.ops-center.org/" />
+  <link rel="alternate" hreflang="tr" href="https://cv.ops-center.org/?lang=tr" />
+  <link rel="alternate" hreflang="x-default" href="https://cv.ops-center.org/" />
+
+  <!-- ── OPEN GRAPH / TWITTER ─────────────────────────────────────────
+       Bunlar olmadan LinkedIn ve WhatsApp paylaşımları boş kart basıyordu.
+       og.png dosyasını index.html ile aynı klasöre koy (1200x630).
+  ────────────────────────────────────────────────────────────────── -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Görkem Koç" />
+  <meta property="og:url" content="https://cv.ops-center.org/" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <meta property="og:title" content="Görkem Koç — Principal Specialist, System &amp; Infrastructure" />
+  <meta property="og:description" content="Hybrid identity, endpoint estate and virtualisation at enterprise scale. Etiya · Ankara." />
+  <meta property="og:image" content="https://cv.ops-center.org/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Görkem Koç — Principal Specialist, System &amp; Infrastructure" />
+  <meta property="profile:first_name" content="Görkem" />
+  <meta property="profile:last_name" content="Koç" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Görkem Koç — Principal Specialist, System &amp; Infrastructure" />
+  <meta name="twitter:description" content="Hybrid identity, endpoint estate and virtualisation at enterprise scale. Etiya · Ankara." />
+  <meta name="twitter:image" content="https://cv.ops-center.org/og.png" />
+
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0d0f13" media="(prefers-color-scheme: dark)" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- ── SCHEMA.ORG · Person ──────────────────────────────────────────
+       Google'ın "knowledge panel" ve zengin sonuç üretebilmesi için.
+       İsim aramalarında LinkedIn'in yanına bu siteyi de koyar.
+  ────────────────────────────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Görkem Koç",
+    "givenName": "Görkem",
+    "familyName": "Koç",
+    "jobTitle": "Principal Specialist — System & Infrastructure",
+    "url": "https://cv.ops-center.org/",
+    "email": "mailto:gorkem.koc@ops-center.org",
+    "image": "https://cv.ops-center.org/og.png",
+    "worksFor": { "@type": "Organization", "name": "Etiya" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Ankara", "addressCountry": "TR" },
+    "sameAs": [
+      "https://www.linkedin.com/in/grkmkoc/",
+      "https://github.com/gorkemkoc-dotcom"
+    ],
+    "knowsAbout": [
+      "Active Directory", "Microsoft Entra ID", "Hybrid Identity", "Microsoft 365",
+      "SCCM", "ManageEngine Endpoint Central", "VMware vSphere", "Hyper-V",
+      "Ansible", "AWS Route 53", "ISO/IEC 27001", "PCI-DSS", "Veeam", "Grafana"
+    ],
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "Architecting on AWS", "credentialCategory": "certificate", "recognizedBy": { "@type": "Organization", "name": "Edu Bulut" } },
+      { "@type": "EducationalOccupationalCredential", "name": "ISO/IEC 27001:2022 Internal Auditor", "credentialCategory": "certificate", "recognizedBy": { "@type": "Organization", "name": "Kalite Norm" } }
+    ]
+  }
+  </script>
+
   <script>
     (function () {
       try {
@@ -21,6 +93,8 @@
   </script>
 </head>
 <body>
+
+<a href="#top" class="skip-link" data-tr="İçeriğe geç" data-en="Skip to content">Skip to content</a>
 
 <header id="header">
   <nav class="nav-wrap">
@@ -44,7 +118,7 @@
         <span class="lang-sep">/</span>
         <span class="lang-inactive">TR</span>
       </button>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -74,8 +148,11 @@
         <li data-tr="Architecting on AWS (2025)" data-en="Architecting on AWS (2025)">Architecting on AWS (2025)</li>
       </ul>
 
+
       <div class="hero-actions">
         <a href="mailto:gorkem.koc@ops-center.org" class="btn" data-tr="E-posta gönder" data-en="Send email">Send email</a>
+        <!-- PDF: ATS'ler ve kurumsal İK HTML parse etmez, dosya ister. -->
+        <a href="gorkem-koc-cv.pdf" class="btn btn-ghost" download data-tr="CV'yi indir (PDF)" data-en="Download CV (PDF)">Download CV (PDF)</a>
         <a href="https://www.linkedin.com/in/grkmkoc/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
       </div>
     </div>
@@ -109,39 +186,61 @@
           </div>
           <span class="job-date">2021 &ndash; <span data-tr="Halen" data-en="Present">Present</span></span>
         </div>
-        <p class="job-sum" data-tr="Etiya'ya 2021'de System Support Specialist olarak başladım; 2023'te Senior, 2025'te Principal Specialist oldum. Bugün şirket genelinde istemci, kimlik ve sunucu altyapısının sürekliliğinden sorumluyum. Başlıca işlerim:" data-en="I joined Etiya in 2021 as System Support Specialist, became Senior in 2023 and Principal Specialist in 2025. Today I'm responsible for keeping the client, identity and server side running across the company. Some of the main things I've done:">I joined Etiya in 2021 as System Support Specialist, became Senior in 2023 and Principal Specialist in 2025. Today I'm responsible for keeping the client, identity and server side running across the company. Some of the main things I've done:</p>
+
+        <!-- ══════════════════════════════════════════════════════════
+             ROL PROGRESSION — 4 yılda iki terfi, artık taranabilir.
+             Önceden bu bilgi özet paragrafın içine gömülüydü ve
+             sayfayı 8 saniye tarayan bir işe alım uzmanı görmüyordu.
+        ═══════════════════════════════════════════════════════════ -->
+        <ol class="role-track" aria-label="Role progression at Etiya">
+          <li class="rt-current">
+            <span class="rt-yr">2025 &rarr;</span>
+            <span class="rt-role">Principal Specialist</span>
+          </li>
+          <li>
+            <span class="rt-yr">2023&ndash;25</span>
+            <span class="rt-role" data-tr="Senior System Specialist" data-en="Senior System Specialist">Senior System Specialist</span>
+          </li>
+          <li>
+            <span class="rt-yr">2021&ndash;23</span>
+            <span class="rt-role">System Support Specialist</span>
+          </li>
+        </ol>
+
+        <p class="job-sum" data-tr="Şirket genelinde istemci, kimlik ve sunucu altyapısının sürekliliğinden sorumluyum. Başlıca işlerim:" data-en="Responsible for keeping the client, identity and server infrastructure running across the company. Some of the main things I've done:">Responsible for keeping the client, identity and server infrastructure running across the company. Some of the main things I've done:</p>
+
         <ul class="job-points">
           <li>
             <span class="ph" data-tr="Operasyonel iş akışlarını otomatikleştirdim" data-en="Automated operational workflows">Automated operational workflows</span>
-            <span class="pb" data-tr="Onboarding, erişim yetkilendirme ve tekrarlayan sistem taleplerini n8n ile Jira üzerinde otomatikleştirdim; manuel süreçleri ortadan kaldırarak ekibin operasyonel iş yükünü ve insan kaynaklı hataları azalttım." data-en="Automated onboarding, access provisioning and recurring system requests in n8n on top of Jira, eliminating manual steps and reducing both the team's operational load and human error.">Automated onboarding, access provisioning and recurring system requests in n8n on top of Jira, eliminating manual steps and reducing both the team's operational load and human error.</span>
+            <span class="pb" data-tr="Onboarding, erişim yetkilendirme ve tekrarlayan sistem taleplerini Jira tetiklemeli n8n akışlarına taşıdım: AD hesabı, grup üyeliği, M365 lisansı ve posta kutusu tek çalıştırmada açılıyor. Manuel adımlar ve bunlarla gelen insan hatası ortadan kalktı." data-en="Moved onboarding, access provisioning and recurring system requests onto Jira-triggered n8n workflows — AD account, group membership, M365 licence and mailbox all created in a single run, removing the manual steps and the human error that came with them.">Moved onboarding, access provisioning and recurring system requests onto Jira-triggered n8n workflows — AD account, group membership, M365 licence and mailbox all created in a single run, removing the manual steps and the human error that came with them.</span>
           </li>
           <li>
             <span class="ph" data-tr="Uç nokta yönetimini merkezileştirdim" data-en="Centralized endpoint management">Centralized endpoint management</span>
-            <span class="pb" data-tr="Tüm kurumsal istemcilerde güvenlik yamalarını ve uygulama dağıtımını SCCM ve ManageEngine ile merkezden standartlaştırdım; tek tip politika altında tutarlı ve denetlenebilir bir uç nokta ortamı sağladım." data-en="Standardized security patching and application deployment across all corporate endpoints with SCCM and ManageEngine, delivering a consistent, auditable estate governed by a single policy.">Standardized security patching and application deployment across all corporate endpoints with SCCM and ManageEngine, delivering a consistent, auditable estate governed by a single policy.</span>
+            <span class="pb" data-tr="SCCM ve ManageEngine ile tüm kurumsal uç noktalarda güvenlik yamalarını ve uygulama dağıtımını tek politika altında topladım; yama uyumluluğu merkezden raporlanabilir ve denetlenebilir hale geldi." data-en="Brought security patching and application deployment across all corporate endpoints under a single policy with SCCM and ManageEngine; patch compliance is now reported centrally and is auditable.">Brought security patching and application deployment across all corporate endpoints under a single policy with SCCM and ManageEngine; patch compliance is now reported centrally and is auditable.</span>
           </li>
           <li>
             <span class="ph" data-tr="Tek sunucu çökse bile servis ayakta kaldı" data-en="Kept services up even if a host fails">Kept services up even if a host fails</span>
-            <span class="pb" data-tr="Şirket içi uygulamaların çalıştığı VMware ve Hyper-V ortamını, tek bir host arızasında servis kesintisi yaşanmayacak şekilde yapılandırdım ve iş açısından kritik servislerin sürekliliğini güvence altına aldım." data-en="Configured the VMware and Hyper-V environment behind our internal applications to withstand a single-host failure without service interruption, safeguarding the continuity of business-critical services.">Configured the VMware and Hyper-V environment behind our internal applications to withstand a single-host failure without service interruption, safeguarding the continuity of business-critical services.</span>
+            <span class="pb" data-tr="Şirket içi uygulamaların çalıştığı VMware ve Hyper-V ortamını tek host arızasında kesintisiz kalacak şekilde yapılandırdım; planlı bakımlar canlı göç ile iş saatleri içinde yapılabiliyor." data-en="Configured the VMware and Hyper-V estate behind our internal applications to survive a single-host failure without interruption; planned maintenance now runs in business hours via live migration.">Configured the VMware and Hyper-V estate behind our internal applications to survive a single-host failure without interruption; planned maintenance now runs in business hours via live migration.</span>
           </li>
           <li>
             <span class="ph" data-tr="Hibrit kimlik altyapısını kurdum" data-en="Unified identity across on-prem and cloud">Unified identity across on-prem and cloud</span>
-            <span class="pb" data-tr="Şirket içi Active Directory ile Microsoft 365 / Entra ID'yi tek bir kimlik düzleminde entegre ettim; tek noktadan erişim yönetimi ve ayrılışta tüm erişimlerin anında kapatılmasıyla kimlik yaşam döngüsünü baştan sona kontrol altına aldım." data-en="Integrated on-prem Active Directory with Microsoft 365 / Entra ID into a single identity plane, with centralized access management and immediate offboarding that keep the full identity lifecycle under control.">Integrated on-prem Active Directory with Microsoft 365 / Entra ID into a single identity plane, with centralized access management and immediate offboarding that keep the full identity lifecycle under control.</span>
+            <span class="pb" data-tr="Şirket içi Active Directory ile Microsoft 365 / Entra ID'yi tek bir kimlik düzleminde birleştirdim; ayrılışta tüm erişimler anında kapanıyor ve kimlik yaşam döngüsü baştan sona denetlenebilir." data-en="Integrated on-prem Active Directory with Microsoft 365 / Entra ID into a single identity plane; on offboarding all access is revoked immediately, and the full identity lifecycle is auditable end to end.">Integrated on-prem Active Directory with Microsoft 365 / Entra ID into a single identity plane; on offboarding all access is revoked immediately, and the full identity lifecycle is auditable end to end.</span>
           </li>
           <li>
             <span class="ph" data-tr="Güvenlik kurallarını günlük işin parçası yaptım" data-en="Made security part of everyday work">Made security part of everyday work</span>
-            <span class="pb" data-tr="ISO 27001 ve PCI-DSS gerekliliklerini günlük operasyona uyarladım: sistem bazlı erişim kontrolü tanımladım, tüm cihazlarda CrowdStrike ve Trend Micro EDR yaygınlaştırdım ve şüpheli olayların otomatik tespit ile yönlendirmesini kurdum." data-en="Operationalized ISO 27001 and PCI-DSS requirements: defined per-system access control, rolled out CrowdStrike and Trend Micro EDR across all devices, and implemented automated detection and routing of suspicious events.">Operationalized ISO 27001 and PCI-DSS requirements: defined per-system access control, rolled out CrowdStrike and Trend Micro EDR across all devices, and implemented automated detection and routing of suspicious events.</span>
+            <span class="pb" data-tr="ISO 27001 ve PCI-DSS gerekliliklerini günlük operasyona uyarladım: sistem bazlı erişim kontrolü tanımladım, tüm cihazlarda CrowdStrike ve Trend Micro EDR yaygınlaştırdım, şüpheli olayların otomatik tespit ve yönlendirmesini kurdum." data-en="Operationalized ISO 27001 and PCI-DSS requirements: defined per-system access control, rolled out CrowdStrike and Trend Micro EDR across all devices, and automated the detection and routing of suspicious events.">Operationalized ISO 27001 and PCI-DSS requirements: defined per-system access control, rolled out CrowdStrike and Trend Micro EDR across all devices, and automated the detection and routing of suspicious events.</span>
           </li>
           <li>
             <span class="ph" data-tr="DNS'i AWS Route 53'e taşıdım" data-en="Migrated DNS to AWS Route 53">Migrated DNS to AWS Route 53</span>
-            <span class="pb" data-tr="Şirketin public DNS hosted zone'unu GoDaddy'den AWS Route 53'e taşıdım ve tüm public DNS yönetimini tek elde, AWS üzerinde topladım." data-en="Moved the company's public DNS hosted zone from GoDaddy to AWS Route 53 and brought all public DNS management together in one place on AWS.">Moved the company's public DNS hosted zone from GoDaddy to AWS Route 53 and brought all public DNS management together in one place on AWS.</span>
+            <span class="pb" data-tr="Şirketin public DNS hosted zone'larını GoDaddy'den AWS Route 53'e taşıdım: TTL düşürme ve paralel yayın penceresiyle çözümleme kesintisi yaşanmadan. Tüm public DNS yönetimi tek elde toplandı." data-en="Moved the company's public DNS hosted zones from GoDaddy to AWS Route 53 using a TTL step-down and a parallel-serving window, so resolution never dropped. All public DNS management now sits in one place.">Moved the company's public DNS hosted zones from GoDaddy to AWS Route 53 using a TTL step-down and a parallel-serving window, so resolution never dropped. All public DNS management now sits in one place.</span>
           </li>
           <li>
             <span class="ph" data-tr="Sunucu provizyonunu kod ile otomatikleştirdim" data-en="Automated server provisioning with code">Automated server provisioning with code</span>
-            <span class="pb" data-tr="TTCloud üzerindeki sanal sunucuları yönetiyor; yapılandırma ve rutin değişiklikleri Ansible ile otomatikleştirerek tutarlı ve tekrarlanabilir kurulumlar sağlıyorum." data-en="Manage the virtual servers on TTCloud and automate their configuration and routine changes with Ansible, delivering consistent and repeatable provisioning.">Manage the virtual servers on TTCloud and automate their configuration and routine changes with Ansible, delivering consistent and repeatable provisioning.</span>
+            <span class="pb" data-tr="TTCloud (Türk Telekom bulutu) üzerindeki sanal sunucuları yönetiyor; yapılandırma ve rutin değişiklikleri Ansible playbook'ları ile otomatikleştiriyorum. Kurulumlar tutarlı ve tekrarlanabilir hale geldi." data-en="I manage the virtual servers on TTCloud (Türk Telekom's cloud) and automate their configuration and routine changes with Ansible playbooks, making builds consistent and repeatable.">I manage the virtual servers on TTCloud (Türk Telekom's cloud) and automate their configuration and routine changes with Ansible playbooks, making builds consistent and repeatable.</span>
           </li>
           <li>
             <span class="ph" data-tr="Altyapıyı izleyip kaynak verimliliğini artırdım" data-en="Monitored infrastructure and optimized resource use">Monitored infrastructure and optimized resource use</span>
-            <span class="pb" data-tr="Sunucu filosunu Grafana ve FlowE ile sürekli izliyor; atıl ve düşük kullanımlı kaynakları tespit ederek ortamı verimli ve sade tutuyorum." data-en="Continuously monitor the server fleet with Grafana and FlowE, identifying idle and underused resources to keep the environment lean and efficient.">Continuously monitor the server fleet with Grafana and FlowE, identifying idle and underused resources to keep the environment lean and efficient.</span>
+            <span class="pb" data-tr="Sunucu filosunu Grafana ve FlowE ile sürekli izliyorum; atıl ve düşük kullanımlı kaynakları tespit ederek kapasiteyi geri kazanıyor ve yeni iş yükleri için donanım alımı gerekmeden yer açıyorum." data-en="I monitor the server fleet continuously with Grafana and FlowE; by identifying idle and underused resources I reclaim capacity and free room for new workloads without buying hardware.">I monitor the server fleet continuously with Grafana and FlowE; by identifying idle and underused resources I reclaim capacity and free room for new workloads without buying hardware.</span>
           </li>
         </ul>
         <div class="tags">
@@ -273,11 +372,20 @@
       </div>
 
       <div class="cert-grid">
+        <!-- ══════════════════════════════════════════════════════════
+             SERTİFİKA DOĞRULAMA LİNKLERİ
+             href="#" olanları gerçek credential URL'i ya da belge
+             görselinin linkiyle değiştir. Doğrulanamayan sertifika,
+             İK gözünde beyandan ibarettir.
+             Belge PDF'lerini repoya /certs/ altına koyup oradan
+             link vermek de yeterli.
+        ═══════════════════════════════════════════════════════════ -->
         <div class="cert reveal">
           <span class="cert-yr">2025</span>
           <div class="cert-main">
             <h3>Architecting on AWS <span class="cert-by">· Edu Bulut</span></h3>
             <p class="muted" data-tr="Bulut tarafında iyi tasarlanmış, yüksek erişilebilir çözümler kurma; AWS üzerinde hesaplama, ağ, depolama ve Route 53 ile DNS yönetimi." data-en="Designing well-architected, highly available solutions on AWS — compute, networking, storage and DNS with Route 53.">Designing well-architected, highly available solutions on AWS — compute, networking, storage and DNS with Route 53.</p>
+            <a class="cert-verify" href="#" target="_blank" rel="noopener" data-tr="Belgeyi doğrula" data-en="Verify credential">Verify credential</a>
           </div>
         </div>
         <div class="cert reveal">
@@ -285,6 +393,7 @@
           <div class="cert-main">
             <h3>ISO/IEC 27001:2022 Internal Auditor <span class="cert-by">· Kalite Norm</span></h3>
             <p class="muted" data-tr="Bilgi güvenliği yönetim sistemini denetleme yetkinliği: süreçleri uluslararası standarda göre kontrol etme, riskleri değerlendirme ve uyumsuzlukları raporlama." data-en="Auditing an information security management system: checking processes against the international standard, assessing risks and reporting non-conformities.">Auditing an information security management system: checking processes against the international standard, assessing risks and reporting non-conformities.</p>
+            <a class="cert-verify" href="#" target="_blank" rel="noopener" data-tr="Belgeyi doğrula" data-en="Verify credential">Verify credential</a>
           </div>
         </div>
         <div class="cert reveal">
@@ -292,6 +401,7 @@
           <div class="cert-main">
             <h3>Linux System Administration <span class="cert-by">· BlueMark Academy</span></h3>
             <p class="muted" data-tr="Ubuntu, RHEL ve CentOS üzerinde sistem yönetimi, komut satırı araçları ve otomasyon teknikleri." data-en="System administration on Ubuntu, RHEL and CentOS, including command-line tooling and automation techniques.">System administration on Ubuntu, RHEL and CentOS, including command-line tooling and automation techniques.</p>
+            <a class="cert-verify" href="#" target="_blank" rel="noopener" data-tr="Belgeyi doğrula" data-en="Verify credential">Verify credential</a>
           </div>
         </div>
         <div class="cert reveal">
@@ -347,6 +457,10 @@
         <a href="https://www.linkedin.com/in/grkmkoc/" target="_blank" rel="noopener" class="contact-item">
           <span class="ci-label">LinkedIn</span>
           <span class="ci-val">linkedin.com/in/grkmkoc</span>
+        </a>
+        <a href="https://github.com/gorkemkoc-dotcom" target="_blank" rel="noopener" class="contact-item">
+          <span class="ci-label">GitHub</span>
+          <span class="ci-val">github.com/gorkemkoc-dotcom</span>
         </a>
         <div class="contact-item contact-item-static">
           <span class="ci-label" data-tr="Konum" data-en="Location">Location</span>
