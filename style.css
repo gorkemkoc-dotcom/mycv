@@ -355,21 +355,6 @@ b.todo {
 [data-theme="dark"] b.todo { background: #422006; color: #fcd34d; }
 
 
-/* ── SERTİFİKA DOĞRULAMA LİNKİ ───────────────────────────────────
-   href="#" kaldığı sürece görünmez — yanlışlıkla ölü link
-   yayınlamanı engeller. Gerçek URL koyunca kendiliğinden çıkar.
-──────────────────────────────────────────────────────────────── */
-.cert-verify {
-  display: inline-flex; align-items: center; gap: 5px;
-  margin-top: 9px;
-  font-family: var(--mono); font-size: .74rem; font-weight: 500;
-  color: var(--accent);
-  border-bottom: 1px solid transparent;
-  transition: border-color .2s;
-}
-.cert-verify:hover { border-bottom-color: var(--accent); }
-.cert-verify::after { content: '↗'; font-size: .72rem; }
-.cert-verify[href="#"], .cert-verify[href=""] { display: none; }
 
 
 /* ── PRINT / TARAYICIDAN PDF ─────────────────────────────────────
